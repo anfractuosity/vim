@@ -6,9 +6,16 @@ set background=dark
 " This gives nice pretty borders
 colorscheme anfractuosity
 
+" execute pathogen#infect()
+
+
+" Show status bar all the time
+set laststatus=2
+
 
 " Important to toggle between splits
 set mouse=a
+set ttymouse=xterm2
 
 " Fancy tag lists
 let Tlist_Show_One_File = 0
@@ -19,3 +26,5 @@ let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Enable_Fold_Column = 0
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Compact_Format = 1
+
+let tlist_tex_settings = 'latex;c:chapters;s:sections;t:subsections;u:subsubsections'

@@ -1,0 +1,55 @@
+syntax enable
+set background=dark
+
+"colorscheme zenburn
+
+" This gives nice pretty borders
+colorscheme anfractuosity
+
+" execute pathogen#infect()
+
+
+" Show status bar all the time
+set laststatus=2
+
+
+" Important to toggle between splits
+set mouse=a
+set ttymouse=xterm2
+
+" Fancy tag lists
+let Tlist_Show_One_File = 0
+let Tlist_Use_Right_Window = 1
+let Tlist_Auto_Open = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_File_Fold_Auto_Close = 1
+let Tlist_Enable_Fold_Column = 0
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Compact_Format = 1
+
+
+
+" Magic status line refresh -- http://www.blaenkdenum.com/posts/a-simpler-vim-statusline/
+function! s:RefreshStatus()
+  for nr in range(1, winnr('$'))
+    call setwinvar(nr, '&statusline', '%!Status(' . nr . ')')
+  endfor
+endfunction
+
+augroup status
+  autocmd!
+  autocmd VimEnter,WinEnter,BufWinEnter * call <SID>RefreshStatus()
+augroup END
+
+function! Status(win)
+	lua << EOF
+	b = vim.window().buffer
+	if b ~= nil then
+		filen = b.name
+	else
+		filen = "No Buffer Today"
+	end
+	if filen == nil then filen = "" end
+	vim.command("return \"%f CONGRATS DOG, YOU\'RE WORKING ON A FILE CALLED "..filen.." AND JUST FOR KICKS HERE\'S THE DATE " ..os.date("%A, in %B").."\"")
+EOF
+endfunction
