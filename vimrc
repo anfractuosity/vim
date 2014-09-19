@@ -8,10 +8,12 @@ colorscheme anfractuosity
 
 " execute pathogen#infect()
 
-
 " Show status bar all the time
 set laststatus=2
 
+" Use GB spelling
+set spelllang=en_gb
+autocmd BufRead,BufNewFile *.tex setlocal spell
 
 " Important to toggle between splits
 set mouse=a
