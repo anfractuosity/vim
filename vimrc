@@ -6,6 +6,9 @@ if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
 
+" Needed to get right-click menu in gvim, useful for spellchecking
+set mousemodel=popup
+
 "colorscheme zenburn
 
 " This gives nice pretty borders
