@@ -1,6 +1,11 @@
 syntax enable
 set background=dark
 
+" Need this as silly gnome terminal doesn't advertise 256 colour support
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
 "colorscheme zenburn
 
 " This gives nice pretty borders
