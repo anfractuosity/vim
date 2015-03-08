@@ -1,4 +1,6 @@
 Readme
 ============================
 
-sudo apt-get install exuberant-ctags
+
+svn checkout svn://svn.code.sf.net/p/ctags/code/trunk ctags-code
+
