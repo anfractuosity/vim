@@ -1,7 +1,7 @@
 syntax enable
 
 " No longer need this - as rust.vim implements this
-" autocmd FileType rust setlocal tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
+autocmd FileType rust setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab 
 
 set background=dark
 
@@ -47,9 +47,9 @@ let tlist_tex_settings = 'latex;c:chapters;s:sections;t:subsections;u:subsubsect
 " Pathogen plugin setup
 execute pathogen#infect()
 " syntax on
-filetype plugin indent on
+" filetype plugin indent on
 
 
 " No longer need this - as rust.vim implements this
 " Set .rs to mean filetype rust, instead of something od
-" au BufRead,BufNewFile *.rs set filetype=rust
+au BufRead,BufNewFile *.rs set filetype=rust
