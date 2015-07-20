@@ -1,4 +1,8 @@
 syntax enable
+
+" No longer need this - as rust.vim implements this
+" autocmd FileType rust setlocal tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
+
 set background=dark
 
 " Need this as silly gnome terminal doesn't advertise 256 colour support
@@ -38,3 +42,14 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_Compact_Format = 1
 
 let tlist_tex_settings = 'latex;c:chapters;s:sections;t:subsections;u:subsubsections'
+
+
+" Pathogen plugin setup
+execute pathogen#infect()
+" syntax on
+filetype plugin indent on
+
+
+" No longer need this - as rust.vim implements this
+" Set .rs to mean filetype rust, instead of something od
+" au BufRead,BufNewFile *.rs set filetype=rust
