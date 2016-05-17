@@ -2,6 +2,7 @@ syntax enable
 
 " No longer need this - as rust.vim implements this
 autocmd FileType rust setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab 
+autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab  
 
 set background=dark
 
