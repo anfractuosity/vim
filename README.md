@@ -1,6 +1,10 @@
 Readme
 ============================
 
+pacman -S ctags
+
+OR
+
 sudo apt-get install exuberant-ctags
 
 OR 
@@ -19,4 +23,5 @@ sudo make install
 cd ~
 ln -s ~/Repositories/vim/.ctags .ctags
 ln -s ~/Repositories/vim/vimrc .vimrc
+ln -s ~/Repositories/vim .vim
 ```
