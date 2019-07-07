@@ -3,6 +3,8 @@ syntax enable
 " No longer need this - as rust.vim implements this
 autocmd FileType rust setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab 
 autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab  
+autocmd FileType c setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab  
+autocmd FileType cpp setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab  
 
 set background=dark
 
@@ -52,5 +54,5 @@ execute pathogen#infect()
 
 
 " No longer need this - as rust.vim implements this
-" Set .rs to mean filetype rust, instead of something od
+" Set .rs to mean filetype rust, instead of something odd
 au BufRead,BufNewFile *.rs set filetype=rust
