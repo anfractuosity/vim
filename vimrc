@@ -56,3 +56,8 @@ execute pathogen#infect()
 " No longer need this - as rust.vim implements this
 " Set .rs to mean filetype rust, instead of something odd
 au BufRead,BufNewFile *.rs set filetype=rust
+
+set guifont=Source\ Code\ Pro\ Regular\ 10
+
+set nomodeline
+
